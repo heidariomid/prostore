@@ -1,5 +1,15 @@
+import ProductList from "@/components/ui/shared/product/product-list";
+import sampleData from "@/db/sample-data";
+
 const HomePage = () => {
-  return <>Latest Products</>;
+  return (
+    <>
+      <div className="space-y-8">
+        <h2 className="h2-bold">Latest Products</h2>
+        <ProductList title="Newest Arrivals" data={sampleData.products} limit={0} />
+      </div>
+    </>
+  );
 };
 
 export default HomePage;
