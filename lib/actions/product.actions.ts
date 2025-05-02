@@ -15,6 +15,12 @@ export async function getLatestProducts() {
     price: product.price.toString(),
     rating: product.rating.toString()
   }));
-
   return convertToPlainObject(formattedData);
+}
+
+export async function getProductBySlug(slug: string) {
+  const prisma = new PrismaClient();
+  return await prisma.product.findFirst({
+    where: { slug: slug }
+  });
 }
