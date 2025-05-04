@@ -17,7 +17,6 @@ const CredentialsSignInForm = () => {
   });
 
   const searchParams = useSearchParams();
-  console.log("searchParams", searchParams);
   const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   const SignInButton = () => {
@@ -29,7 +28,6 @@ const CredentialsSignInForm = () => {
       </Button>
     );
   };
-  console.log("data", data);
   return (
     <form action={action}>
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
