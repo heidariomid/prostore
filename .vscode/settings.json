@@ -1,0 +1,32 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true,
+    "tsconfig.json": true,
+    "**/README.md": true,
+    "tailwind.config.ts": true,
+    "**/postcss.config.mjs": true,
+    "**/next-env.d.ts": true,
+    "**/next.config.ts": true,
+    "**/package.json": false,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/.env": false,
+    "components.json": true,
+    ".gitignore": true,
+    ".eslintrc.json": true,
+    "public": true,
+    "exercise_files": true,
+    ".next": true,
+    "package.json": true,
+    "app/favicon.ico": true,
+    "app/globals.css": true,
+    "app/loading.tsx": true,
+    "app/not-found.tsx": true,
+    "prisma/migrations": true
+  }
+}
