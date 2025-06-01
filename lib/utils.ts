@@ -15,7 +15,7 @@ export function formatNumberWithDecimal(num: number): string {
   return decimal ? `${int}.${decimal.padEnd(2, "0")}` : `${int}.00`;
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function formatError(error: any) {
+export function formatError(error: any) {
   if (error.name === "ZodError") {
     // Handle Zod Error
     const fieldErrors = Object.keys(error.errors).map((field) => {
@@ -110,4 +110,11 @@ export function formUrlQuery({ params, key, value }: { params: string; key: stri
       skipNull: true
     }
   );
+}
+
+// Format numbers
+const NUMBER_FORMATTER = new Intl.NumberFormat("en-US");
+
+export function formatNumber(number: number) {
+  return NUMBER_FORMATTER.format(number);
 }
